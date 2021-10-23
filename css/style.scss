@@ -1,0 +1,115 @@
+@mixin center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#app{
+    min-height: 100vh;
+    @include center();
+    justify-content: flex-end;
+    #as_navbar,#login{
+        h2::first-letter{
+           font-weight: 700;
+           color: #005f73;
+        }
+    }
+    #as_btn{
+        cursor: pointer;
+        background: #005f73;
+        a{
+            color: #fff;
+            font-weight: 500;
+        }
+        &:hover{
+            a{
+                color: #005f73;
+            }
+            &::before{
+                background: #fff;
+            }
+        }
+    }
+
+    #login{
+        position: fixed;
+        top: 0;
+        left: 0;
+        min-height: 100vh;
+        min-width: 100vw;
+        background: #fff;
+        @include center();
+        z-index: 3;
+        #as_input{
+            margin:10px 0;
+        }
+    }
+    .send_message{
+        position: fixed;
+        padding: 5px;
+        bottom: 0;
+        left: 0;
+        width: 100vw;
+        height: 50px;
+        @include center();
+        flex-direction: row;
+        justify-content: space-between;
+        box-shadow: 0 -2.5px 0 #005f73;
+        background: #fff;
+        z-index: 2;
+        input{
+            box-shadow: none;
+            font-size: 16px;
+            width: 100%;
+        }
+        #as_btn{
+            padding: 7px 0;
+            width: 150px;
+            @include center();
+        }
+    }
+    ul{
+        height: 100%;
+        width: 100%;
+        padding: 60px 5px;
+        @include center();
+        align-items: flex-start;
+        justify-content: flex-start;
+        li{
+            @include center();
+            flex-direction: row;
+            h3{
+                height: 50px;
+                width: 50px;
+                @include center();
+                color: #005f73;
+                font-size: 20px;
+                background: #eaebed;
+                border-radius: 50%;
+                cursor: pointer;
+            }
+            .message_bx{
+                margin: 0 10px;
+                padding: 5px 7px;
+                height: 100%;
+                min-width: 150px;
+                max-width: 75vw;
+                overflow: hidden;
+                color: #fff;
+                background: #005f73;
+                border-radius: 4px;
+                span{
+                    @include center();
+                    flex-direction: row;
+                    justify-content: space-between;
+                    color: #ffffff90;
+                    font-weight: 700;
+                }
+            }
+            &:not(:first-child){
+                margin-top: 5px;
+            }
+        }
+    }
+}

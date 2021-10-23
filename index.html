@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://aziz-sobirov.github.io/AS-library/css/as.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>iMessenger</title>
+</head>
+<body onload="as_onload()">
+    <div id="as_load"></div>
+    <div id="app">
+        <nav id="as_navbar"></nav>
+
+        <div id="login">
+            <h2>iMessenger</h2>
+            <input type="search" class="username" id="as_input" placeholder="Your Name">
+            <div id="as_btn" onclick="login()">
+                <a href="#">Login</a>
+            </div>
+        </div>
+        
+        <div class="send_message">
+            <input type="search" class="user_message" id="as_input" placeholder="Your Message">
+            <div id="as_btn" onclick="sendMessage()">
+                <a href="#scrollToFooter" id="as_btn-a">Send</a>
+            </div>
+        </div>
+        <ul id="messages"></ul>
+        <section id="scrollToFooter"></section>
+    </div>
+    
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/7.21.1/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-analytics.js"></script>
+    <script src="https://aziz-sobirov.github.io/AS-library/js/anime-min.js"></script>
+    <script src="./index.js"></script>
+    <script src="https://aziz-sobirov.github.io/AS-library/js/as.js"></script>
+</body>
+</html>

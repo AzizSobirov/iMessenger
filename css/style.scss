@@ -70,7 +70,7 @@
     section{
         min-height: 100vh;
         min-width: 100vw;
-        scroll-snap-align: center;
+        scroll-snap-align: end;
         @include center();
     }
 

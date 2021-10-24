@@ -1,10 +1,10 @@
 let as_nav_h2 = 'iMessenger'
 let as_nav_h3 = ''
 let as_nav_list = [
-    {name:'Home',href:'#'},
-    {name:'My Profile',href:'#'},
-    {name:'About Us',href:'#'},
-    {name:'Contact Us',href:'#'}
+    {name:'Home',href:'#home'},
+    {name:'My Profile',href:'#profile'},
+    {name:'About Us',href:'#about'},
+    {name:'Contact Us',href:'#contact'}
 ]
 
 const firebaseConfig = {

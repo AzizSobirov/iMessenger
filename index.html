@@ -15,20 +15,38 @@
 
         <div id="login">
             <h2>iMessenger</h2>
-            <input type="search" class="username" id="as_input" placeholder="Your Name">
+            <fieldset>
+                <legend>Your name</legend>
+                <input type="text" class="username" placeholder="Your Name">
+            </fieldset>
+            <fieldset>
+                <legend>Your email</legend>
+                <input type="email" class="email" placeholder="Your Email">
+            </fieldset>
+            <fieldset>
+                <legend>Your password</legend>
+                <input type="password" class="password" placeholder="Your Password">
+            </fieldset>
             <div id="as_btn" onclick="login()">
                 <a href="#">Login</a>
             </div>
         </div>
         
-        <div class="send_message">
-            <input type="search" class="user_message" id="as_input" placeholder="Your Message">
-            <div id="as_btn" onclick="sendMessage()">
-                <a href="#scrollToFooter" id="as_btn-a">Send</a>
+        <section id="home">
+            <div class="send_message">
+                <input type="search" class="user_message" id="as_input" placeholder="Your Message">
+                <div id="as_btn" onclick="sendMessage()">
+                    <a href="#" id="as_btn-a">Send</a>
+                </div>
             </div>
-        </div>
-        <ul id="messages"></ul>
-        <section id="scrollToFooter"></section>
+            <ul id="messages"></ul>
+        </section>
+
+        <section id="profile">
+            <h2 id="username"></h2>
+            <h2 id="email"></h2>
+            <h2 id="password"></h2>
+        </section>
     </div>
     
     <script src="https://www.gstatic.com/firebasejs/8.1.1/firebase-app.js"></script>

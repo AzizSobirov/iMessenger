@@ -19,13 +19,19 @@ const firebaseConfig = {
  };
  firebase.initializeApp(firebaseConfig);
 
-let user_name = document.getElementById('scrollToFooter')
+let user_name = document.getElementById('username')
+let user_email = document.getElementById('email')
+let user_pass = document.getElementById('password')
 function login(){
     let username = document.querySelector('.username')
-    if(username.value == ''){
-        alert("Please write your name")
+    let email = document.querySelector('.email')
+    let password = document.querySelector('.password')
+    if(username.value === '' && email.value === '' && password.value === ''){
+        alert("Something went wrong")
     }else{
         user_name.innerHTML = username.value
+        user_email.innerHTML = email.value
+        user_pass.innerHTML = password.value
         document.getElementById('login').style.display='none'
     }
 }
@@ -71,6 +77,8 @@ firebase.database().ref("messages").on("child_added", function (data){
          </div>
          <h3 class="fad fa-trash" data-id="${data.key}" onclick="delMessage(this)"></h3>
      </li>`
+
+     messages.scrollTo(0,messages.scrollHeight)
 
      // let messageList = document.querySelectorAll('.messageList')
      // for(let i=0;i<messageList.length;i++){

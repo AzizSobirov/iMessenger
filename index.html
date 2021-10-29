@@ -16,19 +16,19 @@
         <div id="login">
             <h2>iMessenger</h2>
             <fieldset>
-                <legend>Your name</legend>
+                <legend id="lg_name">Your name</legend>
                 <input type="name" class="username" placeholder="Your Name">
             </fieldset>
             <fieldset>
-                <legend>Your email</legend>
+                <legend id="lg_mail">Your email</legend>
                 <input type="email" class="email" placeholder="Your Email">
             </fieldset>
             <fieldset>
-                <legend>Your password</legend>
+                <legend id="lg_password">Your password</legend>
                 <input type="password" class="password" placeholder="Your Password">
             </fieldset>
             <div id="as_btn" onclick="login()">
-                <a href="#">Login</a>
+                <a href="#">Sign Up</a>
             </div>
         </div>
         
@@ -43,9 +43,12 @@
         </section>
 
         <section id="profile">
-            <h3 id="username"></h3>
-            <h3 id="email"></h3>
-            <h3 id="password"></h3>
+            <ul>
+                <li><h2>My info</h2></li>
+                <li id="username"></li>
+                <li id="email"></li>
+                <li id="password"></li>
+            </ul>
         </section>
     </div>
     
@@ -55,5 +58,6 @@
     <script src="https://aziz-sobirov.github.io/AS-library/js/anime-min.js"></script>
     <script src="./index.js"></script>
     <script src="https://aziz-sobirov.github.io/AS-library/js/as.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/abhiprojectz/alertia/dist/alertia.js"></script>
 </body>
 </html>

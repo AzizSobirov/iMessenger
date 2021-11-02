@@ -17,7 +17,7 @@ const firebaseConfig = {
  };
  firebase.initializeApp(firebaseConfig);
 
- let allUsers = []
+ let allUsers = [{name:'admin'}]
  console.log(allUsers);
 
 let user_name = document.getElementById('username')
@@ -30,13 +30,13 @@ function login(){
     
     let lg_name = document.getElementById('lg_name')
     if(username.value !== ''){
-        let text = ''
         for(let i=0;i<allUsers.length;i++){
-            text += allUsers[i].name.toLowerCase()
             let name = username.value.toLowerCase()
-            if(text.includes(name)){
+            if(allUsers[i].name.toLowerCase().includes(name)){
+                console.log(true);
                 lg_name.textContent = 'username was taken'
             }else{
+                console.log(false);
                 lg_name.textContent = 'Complated'
             }
         }

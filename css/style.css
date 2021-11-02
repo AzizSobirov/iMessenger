@@ -118,11 +118,13 @@
 }
 
 #app section {
+  position: relative;
   min-height: 100vh;
   max-height: 100vh;
   min-width: 100vw;
   max-width: 100vw;
-  scroll-snap-align: end;
+  scroll-snap-align: center;
+  scroll-snap-stop: inherit;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -136,11 +138,6 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-}
-
-#app #home {
-  position: relative;
-  overflow: hidden;
 }
 
 #app #home .send_message {
@@ -172,7 +169,6 @@
   -webkit-box-shadow: 0 -2.5px 0 #005f73;
           box-shadow: 0 -2.5px 0 #005f73;
   background: #fff;
-  z-index: 2;
 }
 
 #app #home .send_message input {
@@ -305,5 +301,41 @@
 
 #app #home ul li:not(:first-child) {
   margin-top: 5px;
+}
+
+#app #profile {
+  padding: 0 5vw;
+}
+
+#app #profile ul {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+#app #profile ul li {
+  margin: 5px 0;
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+#app #profile ul li img {
+  width: 150px;
 }
 /*# sourceMappingURL=style.css.map */

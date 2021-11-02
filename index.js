@@ -33,10 +33,9 @@ function login(){
         for(let i=0;i<allUsers.length;i++){
             let name = username.value.toLowerCase()
             if(allUsers[i].name.toLowerCase().includes(name)){
-                console.log(true);
                 lg_name.textContent = 'username was taken'
+                return
             }else{
-                console.log(false);
                 lg_name.textContent = 'Complated'
             }
         }

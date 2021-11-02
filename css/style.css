@@ -67,7 +67,6 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  display: none;
   z-index: 3;
 }
 
@@ -169,6 +168,7 @@
   -webkit-box-shadow: 0 -2.5px 0 #005f73;
           box-shadow: 0 -2.5px 0 #005f73;
   background: #fff;
+  z-index: 2;
 }
 
 #app #home .send_message input {

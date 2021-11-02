@@ -33,7 +33,7 @@ function login(){
         for(let i=0;i<allUsers.length;i++){
             let name = username.value.toLowerCase()
             if(allUsers[i].name.toLowerCase().includes(name)){
-                lg_name.textContent = 'username was taken'
+                lg_name.textContent = 'Username busy'
                 return
             }else{
                 lg_name.textContent = 'Complated'
@@ -93,10 +93,15 @@ function sendMessage(){
    
     let userMessage = document.querySelector('.user_message')
     let userName = user_name.innerHTML
-    let userPassword = '121'
+    let userPassword = user_pass.innerHTML
 
     if(userMessage.value == ''){
-        alert("False")
+        alertia({
+            "msg": "Something went Wrong",
+            "type":"normal",
+            "style":"slit",
+            "time":"3000"
+        });
         return false
     }else{
         firebase.database().ref("messages").push().set({
@@ -126,23 +131,11 @@ firebase.database().ref("messages").on("child_added", function (data){
                  <h5>${data.val().sender}</h5>
                  <h5>${data.val().time}</h5>    
              </span>
-             <p data-id="${data.val().password}">${data.val().message}</p>
+             <p>${data.val().message}</p>
          </div>
-         <h3 class="fad fa-trash" data-id="${data.key}" onclick="delMessage(this)"></h3>
+         <h3 class="fad fa-trash" data-password="${data.val().password}" data-id="${data.key}" onclick="delMessage(this)"></h3>
      </li>`
-
      scrollDown()
-     // let messageList = document.querySelectorAll('.messageList')
-     // for(let i=0;i<messageList.length;i++){
-     //     let btn = messageList.querySelector(".far.fa-trash")
-     //     let mes = messageList.querySelector("p")
-     //     let pas = mes.getAttribute('data-id')
-
-     //     console.log(pas);
-     //     if(pas == data.val().password){
-     //         btn[i].style.display="flex"
-     //     }
-     // }
 });
 
 function delMessage(val){
